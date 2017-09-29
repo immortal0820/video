@@ -1,0 +1,73 @@
+<html>	
+	<head>
+	
+		<script>
+			function RefreshImg()
+			{
+				var url = "/?action=snapshot" + new Date().getTime();
+				var img = document.getElementById("img");
+				img.src = url;
+				setTimeout("RefreshImg()", 150);
+			}
+			function StopImg()
+			{
+				var xmlhttp;
+				if (window.XMLHttpRequest)
+				{
+					// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp=new XMLHttpRequest();
+				}
+				else
+				{
+					// code for IE6, IE5
+					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange=function()
+				{
+					if (xmlhttp.readyState==4 && xmlhttp.status==200)
+					{
+						// document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+					}
+				}
+				xmlhttp.open("POST","/index.html?StopImg()",true);
+				xmlhttp.send();					
+			}
+			function introduce()
+			{
+				window.open("http://baike.baidu.com/link?url=i3fF6QFZKdVVoEPfGskos__AgjUTgLvkSUHVQek4uZzbEA8E_EaYWu3WKFe6JwY8c9It_bU5b2XjVaY-jOTvy_");
+			}
+		</script>	
+		<meta charset=UTF-8" />		
+		<title>WEB video surveillance</title>
+	</head>
+	<body bgcolor="#CCFFFF">						
+		<div id="nav" >			
+			<center>
+			<div id="header" style="background-color:#A52A2A;">
+				<h1 style="margin-bottom:0;">VIDEO MONITORING</h1></div>			
+				<div id="content" style="background-color:#D8BFD8E;height:390px;width:600px;float:center;">                    
+                <img border="0" src="/?action=snapshot" alt="Pulpit rock" width=600px height=350px;float:center id="img" />
+				<button style="width:90px;height:40px;" onclick="RefreshImg()">Video</button>	
+				<button style="width:90px;height:40px;" onclick="StopImg()">Stop/Start</button>
+				<div id="menu" style="background-color:#D8BFD8E;clear:both;text-align:center;">
+                         
+				</div>
+				</div>
+			</center>
+		</div>
+		<hr/>	
+		<div id="container" style="width:500px">			
+			<div id="header" style="background-color:#66FF33;">
+				<h3 style="margin-bottom:0;">VIDEO SUREILLLANCE INTRODUCED</h3>
+				</div>
+			<div id="menu" style="background-color:#D8BFD8E;height:100px;width:130px; margin-left:88px; margin-top:-1px; float:left;">				
+				<button style="width:100px;height:40px;" onclick="introduce()">Traditional</button>
+				<p style="width:881px;height:40px;"> _  智能视频监控是计算机视觉领域一个备受关注的课题，在安防监控、智能交通、人机交互和智能导航等领域有广泛地应用前景。智能视频监控系统是采用图像处理、模式识别和计算机视觉技术，通过在监控系统中增加智能视频分析模块，借助计算机强大的数据处理能力过滤掉视频画面无用的或干扰信息、自动识别不同物体，分析抽取视频源中关键有用信息，快速准确的定位事故现场，判断监控画面中的异常情况，并以最快和最佳的方式发出警报或触发其它动作，从而有效进行事前预警，事中处理，事后及时取证的全自动、全天候、实时监控的智能系统。随着视频监控系统的应用领域不断扩大,智能视频监控系统应运而生,它满足了远距离监控的要求。基于ARM嵌入式的数字化远程监控是基于现代通信技术的一种应用,与传统的模式监控系统相比：它的组网成本大大降低,系统体积重量大大减小,运行维护更容易。
+				</p>
+				</div>
+			<br/>
+			<div style="font-family:verdana;font-size:15px; width:225px;height:40px; margin-left:1100px; margin-top:-1px;">Collect from <a href="http://www.embedu.org/index-baidu.htm?HQYJ-110" target="_blank" title="华清远见">@2016 华清远见 京ICP证030173号</a>
+				</div>	
+		</div>
+	</body>
+</html>

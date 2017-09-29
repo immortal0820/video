@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pic/bird.jpg</file>
+        <file>pic/clock.jpg</file>
+        <file>pic/gaoyuanyuan.jpg</file>
+        <file>pic/heiguafu.jpeg</file>
+        <file>pic/jiao.jpg</file>
+        <file>pic/liushishi.jpg</file>
+        <file>pic/qiu.jpg</file>
+        <file>pic/taile.jpg</file>
+        <file>pic/yang.jpg</file>
+        <file>pic/youku.jpg</file>
+        <file>pic/stop.jpg</file>
+        <file>pic/start.jpg</file>
+        <file>pic/heise.jpg</file>
+    </qresource>
+</RCC>
